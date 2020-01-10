@@ -38,12 +38,12 @@ import numpy as np
 
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
-# 
-# import dlib.cuda as cuda
-# print(cuda.get_num_devices())
-# 
-# dlib.DLIB_USE_CUDA = True
-# print(dlib.DLIB_USE_CUDA)
+
+import dlib.cuda as cuda
+print(cuda.get_num_devices())
+
+dlib.DLIB_USE_CUDA = True
+print(dlib.DLIB_USE_CUDA)
 
 
 
@@ -77,12 +77,12 @@ def load_cyclegan_with_path(path='cyclegan_baddies_c_1_a'):
 	opt.dataroot = "./test_image"
 	opt.load_size = 256
 	opt.crop_size = 256
-	# opt.gpu_ids = '0'
-	opt.gpu_ids = ''
+	opt.gpu_ids = '0'
+# 	opt.gpu_ids = ''
 	opt.name = path
 	opt.eval = True
 
-	# torch.cuda.set_device(0)
+	torch.cuda.set_device(0)
 	#  create a dataset given opt.dataset_mode and other options
 	model = create_model(opt)      # create a model given opt.model and other options
 	model.setup(opt)  
