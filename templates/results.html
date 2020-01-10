@@ -1,0 +1,92 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>TouchUp</title>
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
+<!-- homepage styling -->
+<link rel="stylesheet" type="text/css" href="/index.css">
+
+   <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height:1.5em;
+      color: white;
+      background-color: #D3D3D3;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      font-family: Times, serif;
+      line-height:1.5em;
+      border-bottom: 1px solid #ccc;
+    }
+    img {
+	max-width: 80%;
+	height: auto;
+	}
+	.myButton {
+	background-color:#44c767;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+    </style>
+
+ </head>
+
+<body>
+
+<div class="container">
+      <div class="page-header">
+        <h1>
+        <a href="/">
+       	<<< Try Again
+       	</a>
+        <!-- <img src="static/icon.png" alt="Syndeca" style="padding:16px"  /> -->
+        </h1>
+        <p>
+         Photorealistic anyone-to-blond transformation using neural networks
+        </p>
+      </div>
+
+	<div class="margin-top:-80px">
+<!-- 		<h2>Searched With Image</h2> -->
+		<img class="media-object" style="float:left; margin:20px 20px 20px 20px; max-width:400px; max-height:600px; min-width:600px; min-height:600px; object-fit: contain;" width="600px" height="600px" src={{img_save_name2}}>
+	</div>
+    </div>
+<!-- 
+    <h3>Technical Discussion</h3>
+    <p> This is a visual search demo. Click on a wood panel, and the other wood panels will re-order by similarity. This is done by measuring the pair-wise euclidian distance between the feature vectors for the images. We generate these feature vectors using a pre-trained TensorFlow implementation of Google's Inception-v3 model. Although the Inception-v3 model is originally trained for a general 1000-label classification task, the second-to-last layer containing a 2048 dimension feature vector feeding
+    into the softmax classifier can be used as a generalizable representation of an image (a.k.a. transfer learning). To learn more about the underlying convolutional neural network architecture for Inception-v3, check out <a href="https://arxiv.org/abs/1512.00567">this paper by Szegedy et al. (2015).</a> </p>
+    <img src="/inception_architecture.png" class="inception_img">
+ -->
+</div>
+
+
+<p style="color:#D3D3D3;">{{merged_time_dict}}</p>
+
+</body>
+</html>
