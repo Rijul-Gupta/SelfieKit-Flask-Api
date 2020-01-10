@@ -161,8 +161,9 @@ def run_hair_on_image(image, sub_folder_save, hair_num):
 	hair_mask_align_0 = final_full_face_big_before_seamless_clone(hair_mask_align_0.copy(), full_face_mask)
 	
 	
-	cyc_hair_0 = run_preprocessed_crop_through_cyclegan(hair_0, path = 'hairstyle_cyclegan_data_2_a_cyclegan_output')
-	replicate_cyc_hair_0 = seamless_clone_image_with_mask(replicate_hair, cv2.resize(cyc_hair_0, (crop_hair.shape[0], crop_hair.shape[1])), hair_mask_align_0, None, crop_array_hair)
+# 	cyc_hair_0 = run_preprocessed_crop_through_cyclegan(hair_0, path = 'hairstyle_cyclegan_data_2_a_cyclegan_output')
+# 	replicate_cyc_hair_0 = seamless_clone_image_with_mask(replicate_hair, cv2.resize(cyc_hair_0, (crop_hair.shape[0], crop_hair.shape[1])), hair_mask_align_0, None, crop_array_hair)
+	replicate_cyc_hair_0 = seamless_clone_image_with_mask(replicate_hair, hair_0, hair_mask_align_0, None, crop_array_hair)
 	unreplicated_cyc_hair_0 = unreplicate_image_with_border_array(replicate_cyc_hair_0, border_array_hair)
 
 	return unreplicated_cyc_hair_0
