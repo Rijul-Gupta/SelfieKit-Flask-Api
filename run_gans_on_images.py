@@ -129,9 +129,9 @@ def get_transform(opt, params=None, grayscale=False, method=Image.BICUBIC, conve
             transform_list += [transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]
 
     transform_list = []
-    osize = [opt.load_size, opt.load_size]
-    transform_list.append(transforms.Resize(osize, method))
-    transform_list.append(transforms.Lambda(lambda img: __make_power_2(img, base=4, method=method)))
+#     osize = [opt.load_size, opt.load_size]
+#     transform_list.append(transforms.Resize(osize, method))
+#     transform_list.append(transforms.Lambda(lambda img: __make_power_2(img, base=4, method=method)))
     transform_list += [transforms.ToTensor()]
     transform_list += [transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]
     return transforms.Compose(transform_list)
@@ -188,8 +188,8 @@ def run_stgan_on_image(masked_eye_left, gan_path_name='', attr_name='', intensit
 def run_cyclegan_on_preprocessed_image(processed_image, cyclegan_path = 'stgan128_wrinkled_cyclegan_data_1_a_cyclegan_ouutput'):
 
 # 	image_size = 
-# 	masked_image3_resized = cv2.resize(processed_image, (256, 256))
-	masked_image3_resized = processed_image.copy()
+	masked_image3_resized = cv2.resize(processed_image, (256, 256))
+# 	masked_image3_resized = processed_image.copy()
 	
 	
 	opt = cyclegan_opts[cyclegan_path]
