@@ -808,8 +808,8 @@ if __name__=="__main__":
 	load_cyclegan_with_path(path='stgan128_wrinkled_cyclegan_data_1_a_cyclegan_ouutput')
 	reset_default_graph()
 	load_cyclegan_with_path(path='stgan128_perfect_makeup_cyclegan_data_3_cyclegan_output')
-	reset_default_graph()
-	load_cyclegan_with_path(path='hairstyle_cyclegan_data_2_a_cyclegan_output')
+	#reset_default_graph()
+	#load_cyclegan_with_path(path='hairstyle_cyclegan_data_2_a_cyclegan_output')
 	app.run(host="0.0.0.0", port=8000)
 	
 # 	test_full_process()
